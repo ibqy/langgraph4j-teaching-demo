@@ -10,7 +10,7 @@
 - 区分图定义 `StateGraph` 与可执行图 `CompiledGraph`。
 - 理解节点返回的是局部更新，而不是完整状态。
 - 对照 HTTP 结果找到输入、输出和真实节点路径。
-- 使用 LangGraph4j 1.9.0 的 `GraphInput`，不照搬其他框架的恢复 API。
+- 使用 LangGraph4j 1.9.5 的 `GraphInput`，不照搬其他框架的恢复 API。
 
 ## 原生拓扑
 

@@ -1,6 +1,6 @@
 # 与 Spring AI Alibaba Graph 对照
 
-两套课程都强调真实图执行，但不是同一个依赖的不同封装。以下对照限定在 **LangGraph4j 1.9.0** 与配套课程使用的 **Spring AI Alibaba Graph 1.1.2.2**，不推断后续版本。
+两套课程都强调真实图执行，但不是同一个依赖的不同封装。以下对照限定在 **LangGraph4j 1.9.5** 与配套课程使用的 **Spring AI Alibaba Graph 1.1.2.4-security-fix**，不推断后续版本。
 
 ## 定位与选择
 
@@ -19,7 +19,7 @@
 
 ### 输入与恢复
 
-LangGraph4j 1.9.0 使用显式 `GraphInput`：
+LangGraph4j 1.9.5 使用显式 `GraphInput`：
 
 ```java
 app.invoke(GraphInput.args(input), config);
@@ -58,7 +58,7 @@ LangGraph4j 使用异步生成器，不是 Reactor `Flux` 原生契约。配套 
 
 ## 参考依据
 
-- [LangGraph4j 1.9.0 源码](https://github.com/langgraph4j/langgraph4j/tree/v1.9.0)
-- [原生并行分支限制](https://github.com/langgraph4j/langgraph4j/blob/v1.9.0/src/site/mkdocs/core/parallel-branch.md)
-- [原生子图语义](https://github.com/langgraph4j/langgraph4j/blob/v1.9.0/src/site/mkdocs/core/subgraph.md)
+- [LangGraph4j 1.9.0 源码](https://github.com/langgraph4j/langgraph4j/tree/v1.9.5)
+- [原生并行分支限制](https://github.com/langgraph4j/langgraph4j/blob/v1.9.5/src/site/mkdocs/core/parallel-branch.md)
+- [原生子图语义](https://github.com/langgraph4j/langgraph4j/blob/v1.9.5/src/site/mkdocs/core/subgraph.md)
 - [配套 Spring AI Alibaba Graph 项目](https://github.com/ibqy/spring-ai-alibaba-graph-demo)

@@ -52,7 +52,7 @@ var config = RunnableConfig.builder().threadId("lesson-001").build();
 var result = app.invoke(GraphInput.args(Map.of("name", "小北")), config);
 ```
 
-1.9.0 推荐明确使用 `GraphInput`，避免依赖即将移除的 Map 重载。`GraphInput.noArgs()` 表示新执行但无显式参数，`GraphInput.resume()` 表示恢复；两者不可互换。
+1.9.5 推荐明确使用 `GraphInput`，避免依赖即将移除的 Map 重载。`GraphInput.noArgs()` 表示新执行但无显式参数，`GraphInput.resume()` 表示恢复；两者不可互换。
 
 ## 5. Checkpoint 与 threadId
 

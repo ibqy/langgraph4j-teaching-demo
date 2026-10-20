@@ -54,7 +54,7 @@ curl -sS http://127.0.0.1:8099/api/demos/demo03/graph
 ```
 
 以上摘自 `LearningState`；`replacement` 没有声明 Channel，因此后值覆盖前值。
-本课采用 LangGraph4j 1.9.0：`appender` 对相等元素去重。
+本课采用 LangGraph4j 1.9.5：`appender` 对相等元素去重。
 要记录“同一动作发生了两次”，应使用 `appenderWithDuplicate`，不能只凭名字推断。
 
 算式是 `0 + 2 + 3 = 5`。

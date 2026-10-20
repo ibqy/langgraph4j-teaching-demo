@@ -107,7 +107,8 @@ public class DemoRuntime {
             // Native history is newest first; the HTTP contract is chronological.
             var history = new ArrayList<>(e.graph.getStateHistory(e.baseConfig));
             Collections.reverse(history);
-            return history.stream().map(s -> new History(s.config().checkPointId().orElse(null), s.node(), s.next(), copy(s.state().data()))).toList();
+            // LangGraph4j 1.9.x：StateSnapshot 直接暴露 checkpointId()（字符串），不再经 RunnableConfig  Optional 获取
+            return history.stream().map(s -> new History(s.checkpointId(), s.node(), s.next(), copy(s.state().data()))).toList();
         } finally { e.lock.unlock(); }
     }
 
@@ -171,8 +172,12 @@ public class DemoRuntime {
             RunnableConfig config = e.baseConfig;
             if (decision != null) {
                 // Never reuse a checkpoint ID from a previous pause. Keep the demo's executor metadata.
-                e.graph.updateState(e.graph.getState(e.baseConfig).config(), decision);
-                config = e.graph.getState(e.baseConfig).config();
+                // LangGraph4j 1.9.x：StateSnapshot 不再直接暴露 config()，用 checkpointId 重建恢复配置；
+                // updateState 返回更新后的新配置（携带新 checkpointId），直接用于恢复执行。
+                var snapshot = e.graph.getState(e.baseConfig);
+                var resumeConfig = RunnableConfig.builder(e.baseConfig)
+                        .checkPointId(snapshot.checkpointId()).build();
+                config = e.graph.updateState(resumeConfig, decision);
             }
             generator = e.graph.stream(input, config);
             e.generator = generator;

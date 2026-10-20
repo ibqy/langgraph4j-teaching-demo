@@ -13,9 +13,9 @@
 | 组件 | 版本 / 职责 |
 |---|---|
 | Java | 21 |
-| Spring Boot | 3.5.8，应用宿主与本地 HTTP 接口 |
-| LangGraph4j | 1.9.0，真实 StateGraph 编排引擎 |
-| LangChain4j | 1.20.0，模型消息与工具协议 |
+| Spring Boot | 3.5.16，应用宿主与本地 HTTP 接口 |
+| LangGraph4j | 1.9.5，真实 StateGraph 编排引擎 |
+| LangChain4j | 1.22.0，模型消息与工具协议 |
 | VitePress | 1.6.4，静态中文文档站 |
 
 默认不需要 API Key。01—11、13—18 课使用确定性 Java 节点；第 12 课使用明确标识的离线 ChatModel，经真实 LangChain4j 消息及 LC4jToolService 演示工具闭环。按需配置真实 OpenAI 兼容模型，不将离线回答冒充大模型推理。

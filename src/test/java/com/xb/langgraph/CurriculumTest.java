@@ -81,7 +81,9 @@ class CurriculumTest {
         var history = g.getStateHistory(c);
         assertThat(history).hasSizeGreaterThanOrEqualTo(3);
         var historical = history.stream().filter(s -> "checkpoint:one".equals(value(s.state(),"result"))).findFirst().orElseThrow();
-        assertThat(value(g.getState(historical.config()).state(),"result")).isEqualTo("checkpoint:one");
+        // LangGraph4j 1.9.x：StateSnapshot 不再暴露 config()，用其 checkpointId 重建历史配置
+        var historicalConfig = RunnableConfig.builder(c).checkPointId(historical.checkpointId()).build();
+        assertThat(value(g.getState(historicalConfig).state(),"result")).isEqualTo("checkpoint:one");
         assertThat(value(g.getState(c).state(),"result")).isEqualTo("checkpoint:done");
     }
     @Test void threadsUseOneCompiledGraphAndOneSaverWithoutLeaking() throws Exception {
