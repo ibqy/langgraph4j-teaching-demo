@@ -164,7 +164,7 @@ HTTP 客户端只发 `{"approved":true/false}`。
 MemorySaver 仅进程内保存；生产审批需要持久化、并发提交控制及审计。
 不要把同一个人连续 curl 两次当作已经证明经理与财务权限隔离。
 
-源码路径：`src/main/java/com/xb/langgraph/demo17/ExpenseApprovalDemo.java`。
+源码路径：[ExpenseApprovalDemo.java](../../src/main/java/com/xb/langgraph/demo17/ExpenseApprovalDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo17/ExpenseApprovalDemo.java
 

@@ -131,7 +131,7 @@ curl -sS "http://127.0.0.1:8099/api/executions/$EXECUTION_ID/history"
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo08/CheckpointDemo.java`。
+源码路径：[CheckpointDemo.java](../../src/main/java/com/xb/langgraph/demo08/CheckpointDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo08/CheckpointDemo.java
 

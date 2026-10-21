@@ -149,6 +149,8 @@ temperature 为 0 也不构成远程结果完全确定的保证。
 
 ## 课程源码
 
+源码路径：[ModelToolLoopDemo.java](../../src/main/java/com/xb/langgraph/demo12/ModelToolLoopDemo.java) · [OfflineArithmeticChatModel.java](../../src/main/java/com/xb/langgraph/demo12/OfflineArithmeticChatModel.java) · [ModelConfiguration.java](../../src/main/java/com/xb/langgraph/demo12/ModelConfiguration.java)。
+
 [图与工具](#图与工具)、[离线协议模型](#离线协议模型)、[真实客户端配置](#真实客户端配置)共同构成完整证据。
 
 ### 图与工具

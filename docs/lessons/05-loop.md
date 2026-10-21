@@ -124,7 +124,7 @@ HTTP `run` 合并样例输入；省略 `target` 使用 3，不会沿用上一次
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo05/LoopGraphDemo.java`。
+源码路径：[LoopGraphDemo.java](../../src/main/java/com/xb/langgraph/demo05/LoopGraphDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo05/LoopGraphDemo.java
 

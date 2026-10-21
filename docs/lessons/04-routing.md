@@ -131,7 +131,7 @@ curl -sS -X POST http://127.0.0.1:8099/api/demos/demo04/run \
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo04/ConditionalGraphDemo.java`。
+源码路径：[ConditionalGraphDemo.java](../../src/main/java/com/xb/langgraph/demo04/ConditionalGraphDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo04/ConditionalGraphDemo.java
 

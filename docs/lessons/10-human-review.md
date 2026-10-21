@@ -135,7 +135,7 @@ curl -sS "http://127.0.0.1:8099/api/executions/$EXECUTION_ID"
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo10/HumanReviewDemo.java`。
+源码路径：[HumanReviewDemo.java](../../src/main/java/com/xb/langgraph/demo10/HumanReviewDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo10/HumanReviewDemo.java
 

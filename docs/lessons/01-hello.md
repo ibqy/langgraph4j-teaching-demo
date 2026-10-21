@@ -126,7 +126,7 @@ curl -sS "http://127.0.0.1:8099/api/executions/$EXECUTION_ID"
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo01/HelloGraphDemo.java`。
+源码路径：[HelloGraphDemo.java](../../src/main/java/com/xb/langgraph/demo01/HelloGraphDemo.java)。
 以下直接包含仓库文件，不是另写一套伪实现。
 
 <<< ../../src/main/java/com/xb/langgraph/demo01/HelloGraphDemo.java

@@ -122,7 +122,7 @@ curl -sS "http://127.0.0.1:8099/api/executions/$EXECUTION_A/history"
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo09/ThreadIsolationDemo.java`。
+源码路径：[ThreadIsolationDemo.java](../../src/main/java/com/xb/langgraph/demo09/ThreadIsolationDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo09/ThreadIsolationDemo.java
 

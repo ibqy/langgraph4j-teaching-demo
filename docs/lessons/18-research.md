@@ -164,7 +164,7 @@ facts 与 synthesis 仍保留，因为 reject 只返回 status 更新，没有�
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo18/ResearchWorkflowDemo.java`。
+源码路径：[ResearchWorkflowDemo.java](../../src/main/java/com/xb/langgraph/demo18/ResearchWorkflowDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo18/ResearchWorkflowDemo.java
 

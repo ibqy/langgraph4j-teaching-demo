@@ -117,6 +117,8 @@ curl -sS -X POST http://127.0.0.1:8099/api/demos/demo03/run \
 
 ## 课程源码
 
+源码路径：[ReducerGraphDemo.java](../../src/main/java/com/xb/langgraph/demo03/ReducerGraphDemo.java) · [LearningState.java](../../src/main/java/com/xb/langgraph/LearningState.java)。
+
 [课程实现](#课程实现)与[共享合并规则](#共享合并规则)应一起阅读。
 测试 `reducersShowSumAppendDedupDuplicatesAndReplacement` 分别断言四种结果。
 

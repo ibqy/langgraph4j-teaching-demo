@@ -116,6 +116,8 @@ curl -sS -X POST http://127.0.0.1:8099/api/demos/demo06/run \
 
 ## 课程源码
 
+源码路径：[ParallelFanoutDemo.java](../../src/main/java/com/xb/langgraph/demo06/ParallelFanoutDemo.java) · [ParallelExecutionTest.java](../../src/test/java/com/xb/langgraph/ParallelExecutionTest.java)。
+
 [实现](#课程实现)与[并发验证](#并发验证)配合阅读。
 
 ### 课程实现

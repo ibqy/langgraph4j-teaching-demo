@@ -133,7 +133,7 @@ stream 仍然使用 `流式输出`。
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo11/NodeStreamingDemo.java`。
+源码路径：[NodeStreamingDemo.java](../../src/main/java/com/xb/langgraph/demo11/NodeStreamingDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo11/NodeStreamingDemo.java
 

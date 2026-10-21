@@ -133,7 +133,7 @@ HTTP 会合并默认字段，但不要从输入注入 balance 或 appliedOperati
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo14/IdempotencyDemo.java`。
+源码路径：[IdempotencyDemo.java](../../src/main/java/com/xb/langgraph/demo14/IdempotencyDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo14/IdempotencyDemo.java
 

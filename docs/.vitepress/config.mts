@@ -22,6 +22,20 @@ export default defineConfig({
     lineNumbers: true,
     theme: { light: 'github-light', dark: 'github-dark' },
     config(md) {
+      // 把 ../ 或 ../../ 开头的仓库内源码链接重写为 GitHub 绝对地址
+      const defaultLink =
+        md.renderer.rules.link_open ||
+        ((tokens, idx, options, _env, self) => self.renderToken(tokens, idx, options))
+      md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+        const href = tokens[idx].attrGet('href')
+        if (href && href.startsWith('../')) {
+          const rel = href.replace(/^(\.\.\/)+/, '')
+          const kind = /\.[A-Za-z]+$/.test(rel) ? 'blob' : 'tree'
+          tokens[idx].attrSet('href', `${repository}/${kind}/main/${rel}`)
+        }
+        return defaultLink(tokens, idx, options, env, self)
+      }
+
       const fence = md.renderer.rules.fence!
       md.renderer.rules.fence = (tokens, index, options, env, self) => {
         const token = tokens[index]
@@ -38,7 +52,8 @@ export default defineConfig({
       { text: '课程地图', link: '/#curriculum' },
       { text: '学习指南', link: '/guide/getting-started' },
       { text: '框架对照', link: '/guide/comparison' },
-      { text: '源码', link: repository }
+      { text: '源码', link: repository },
+      { text: '学习路径', link: 'https://ibqy.github.io/curriculum' }
     ],
     sidebar: [
       { text: '学习指南', items: guides.map(([slug, text]) => ({ text, link: `/guide/${slug}` })) },

@@ -145,7 +145,7 @@ curl -sS "http://127.0.0.1:8099/api/executions/$EXECUTION_ID/history"
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo16/TicketWorkflowDemo.java`。
+源码路径：[TicketWorkflowDemo.java](../../src/main/java/com/xb/langgraph/demo16/TicketWorkflowDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo16/TicketWorkflowDemo.java
 

@@ -1,3 +1,17 @@
+<p align="center">
+  <a href="https://ibqy.github.io/langgraph4j-teaching-demo/"><img src="https://img.shields.io/badge/在线课件-2F6FEB?style=flat-square" alt="在线课件"></a>
+  <img src="https://img.shields.io/badge/Java-21-2266EE?style=flat-square" alt="Java 21">
+  <img src="https://img.shields.io/badge/Spring_Boot-3.5.16-6DB33F?style=flat-square" alt="Spring Boot 3.5.16">
+  <img src="https://img.shields.io/badge/LangGraph4j-18_课-8957E5?style=flat-square" alt="18 课">
+  <img src="https://img.shields.io/github/license/ibqy/langgraph4j-teaching-demo?style=flat-square" alt="License">
+  <img src="https://img.shields.io/github/stars/ibqy/langgraph4j-teaching-demo?style=flat-square" alt="Stars">
+</p>
+
+> **课程位置** 阶段 3 · 图编排与可恢复工作流 — 第 2 站
+> [上一站 SAA Graph](https://ibqy.github.io/spring-ai-alibaba-graph-demo/) → **LangGraph4j** → [下一站 Agent 编排](https://ibqy.github.io/agent-orchestration-demo/) ｜ [完整学习路线](https://ibqy.github.io/curriculum)
+
+---
+
 # LangGraph4j 学习实战
 
 18 个原生 LangGraph4j Demo：从状态、路由与并行，到检查点恢复、模型工具与业务工作流。**基础 6 课 + 高阶 9 课 + 实战 3 课**，附完整中文逐课文档和独立学习网站。

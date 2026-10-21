@@ -128,7 +128,7 @@ trace 使用保留重复追加器，仍可以出现两次相同节点名。
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo15/NodeTimingDemo.java`。
+源码路径：[NodeTimingDemo.java](../../src/main/java/com/xb/langgraph/demo15/NodeTimingDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo15/NodeTimingDemo.java
 

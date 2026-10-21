@@ -125,7 +125,7 @@ curl -sS -X POST http://127.0.0.1:8099/api/demos/demo13/run \
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo13/BoundedRetryDemo.java`。
+源码路径：[BoundedRetryDemo.java](../../src/main/java/com/xb/langgraph/demo13/BoundedRetryDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo13/BoundedRetryDemo.java
 

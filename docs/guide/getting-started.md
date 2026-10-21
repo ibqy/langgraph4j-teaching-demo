@@ -118,6 +118,19 @@ npm run docs:preview
 
 每课建议用同一套动作：读输入与拓扑 → 执行默认样例 → 查看状态与历史 → 修改一个条件 → 对照源码和测试解释变化。
 
+## 代码地图
+
+| 位置 | 关键类 | 职责 |
+|---|---|---|
+| 根包 | [LangGraphApplication](../../src/main/java/com/xb/langgraph/LangGraphApplication.java) / [GraphDemo](../../src/main/java/com/xb/langgraph/GraphDemo.java) / [LearningState](../../src/main/java/com/xb/langgraph/LearningState.java) | 启动入口；18 课统一接口；共享状态 schema 与合并规则 |
+| `demo01`–`demo06` | [HelloGraphDemo](../../src/main/java/com/xb/langgraph/demo01/HelloGraphDemo.java) / [SequenceGraphDemo](../../src/main/java/com/xb/langgraph/demo02/SequenceGraphDemo.java) / [ReducerGraphDemo](../../src/main/java/com/xb/langgraph/demo03/ReducerGraphDemo.java) / [ConditionalGraphDemo](../../src/main/java/com/xb/langgraph/demo04/ConditionalGraphDemo.java) / [LoopGraphDemo](../../src/main/java/com/xb/langgraph/demo05/LoopGraphDemo.java) / [ParallelFanoutDemo](../../src/main/java/com/xb/langgraph/demo06/ParallelFanoutDemo.java) | 从单节点、顺序、Reducer 到路由、循环、并行汇合的基础拓扑 |
+| `demo07`–`demo11` | [SubgraphDemo](../../src/main/java/com/xb/langgraph/demo07/SubgraphDemo.java) / [CheckpointDemo](../../src/main/java/com/xb/langgraph/demo08/CheckpointDemo.java) / [ThreadIsolationDemo](../../src/main/java/com/xb/langgraph/demo09/ThreadIsolationDemo.java) / [HumanReviewDemo](../../src/main/java/com/xb/langgraph/demo10/HumanReviewDemo.java) / [NodeStreamingDemo](../../src/main/java/com/xb/langgraph/demo11/NodeStreamingDemo.java) | 子图组合、历史检查点、threadId 隔离、人工审批、节点流 |
+| `demo12`–`demo15` | [ModelToolLoopDemo](../../src/main/java/com/xb/langgraph/demo12/ModelToolLoopDemo.java) / [OfflineArithmeticChatModel](../../src/main/java/com/xb/langgraph/demo12/OfflineArithmeticChatModel.java) / [ModelConfiguration](../../src/main/java/com/xb/langgraph/demo12/ModelConfiguration.java) / [BoundedRetryDemo](../../src/main/java/com/xb/langgraph/demo13/BoundedRetryDemo.java) / [IdempotencyDemo](../../src/main/java/com/xb/langgraph/demo14/IdempotencyDemo.java) / [NodeTimingDemo](../../src/main/java/com/xb/langgraph/demo15/NodeTimingDemo.java) | 模型与工具协议、离线模型、有界重试、副作用幂等、节点计时 |
+| `demo16`–`demo18` | [TicketWorkflowDemo](../../src/main/java/com/xb/langgraph/demo16/TicketWorkflowDemo.java) / [ExpenseApprovalDemo](../../src/main/java/com/xb/langgraph/demo17/ExpenseApprovalDemo.java) / [ResearchWorkflowDemo](../../src/main/java/com/xb/langgraph/demo18/ResearchWorkflowDemo.java) | 工单、费用审批、研究报告三个业务闭环 |
+| `web` | [DemoController](../../src/main/java/com/xb/langgraph/web/DemoController.java) / [DemoRuntime](../../src/main/java/com/xb/langgraph/web/DemoRuntime.java) / [ApiErrors](../../src/main/java/com/xb/langgraph/web/ApiErrors.java) | `/api/demos` 目录、运行/恢复/查询端点、错误映射 |
+
+> 每课文档末尾的「课程源码」会直接嵌入该课 Java 文件；上表链接指向 GitHub 原文件，方便对照历史版本。
+
 ## 按需开启真实模型
 
 仅第 12 课需要模型协议。默认 `offline` 通过真实 LangChain4j 消息和工具服务完成确定性算术闭环；它不是外部大模型，也不能用来评估模型能力。
@@ -136,3 +149,10 @@ mvn spring-boot:run
 不要把占位文字原样当地址使用。远程服务必须使用 HTTPS；只有本机回环开发地址允许 HTTP。API Key 不要写进源码、文档、前端或 Git。环境变量在新进程启动时读取；配置不完整会启动失败，不会偷偷回退到离线模式。客户端超时为 30 秒，供应商重试关闭，模型工具循环另有轮数上限。
 
 恢复离线模式时，将 `TEACHING_MODEL_PROVIDER` 设为 `offline` 并重启。具体消息流和序列化说明见[模型与工具](/lessons/12-model)。
+
+## 在路线中的位置
+
+> **Java × AI 进阶路线** · 阶段 3「图编排与可恢复工作流」第 2 站  
+> **LangGraph4j（原生图编排）** → 上一站：[Spring AI Alibaba Graph](https://ibqy.github.io/spring-ai-alibaba-graph-demo/) · 下一站：[复杂 Agent 编排系统](https://ibqy.github.io/agent-orchestration-demo/)  
+> 完整路线：[ibqy.github.io/curriculum](https://ibqy.github.io/curriculum)
+

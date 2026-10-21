@@ -127,7 +127,7 @@ curl -sS -X POST http://127.0.0.1:8099/api/demos/demo07/run \
 
 ## 课程源码
 
-源码路径：`src/main/java/com/xb/langgraph/demo07/SubgraphDemo.java`。
+源码路径：[SubgraphDemo.java](../../src/main/java/com/xb/langgraph/demo07/SubgraphDemo.java)。
 
 <<< ../../src/main/java/com/xb/langgraph/demo07/SubgraphDemo.java
 
